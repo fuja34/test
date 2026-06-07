@@ -1,5 +1,5 @@
 window.GAMEBOOK_CSV = `page,text,image,choice1_text,choice1_to,choice2_text,choice2_to,choice3_text,choice3_to
-0,サンプルゲームブック,motoyan_001.png,はじめる,1,(c) 2026 R-Business,,,
+0,サンプルゲームブック,motoyan_001.png,はじめる,1,(c) 2026 AMA-GAMA,,,
 1,"古い洞窟の入り口に立っている。
 ひんやりとした空気が奥から流れてくる。
 あなたはどうする？",元ヤン姉_出力_002.png,次へ,2,引き返して帰る,3,,
