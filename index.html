@@ -9,8 +9,7 @@
 </head>
 <body>
   <main id="app">
-    <!-- ページ／タイトル共用の描画領域（タイトルは page=0 としてCSVから描画）。
-         このファイルは編集不要です（内容はすべて data.csv から制御されます）。 -->
+    
     <section id="game-screen" class="screen" hidden>
       <div class="page" id="page">
         <div class="page-media" id="page-media"></div>
@@ -20,7 +19,7 @@
       </div>
     </section>
 
-    <!-- 読み込み中 / エラー表示 -->
+    
     <section id="loading-screen" class="screen">
       <p class="loading-text">読み込み中...</p>
     </section>
@@ -28,7 +27,7 @@
       <p class="error-text" id="error-message"></p>
     </section>
 
-    <!-- CSV選択画面（サーバー無し・埋め込み無しで直接開いたときのフォールバック） -->
+    
     <section id="picker-screen" class="screen" hidden>
       <div class="picker-inner">
         <p class="picker-title">データ(CSV)を読み込んでください</p>
@@ -42,8 +41,7 @@
     </section>
   </main>
 
-  <!-- 任意：CSVを埋め込んだデータ（配布してダブルクリックで開く場合に使用）。
-       存在しなくても動作します（その場合はfetch→ファイル選択にフォールバック）。 -->
+  
   <script src="data/data.js"></script>
   <script src="js/script.js"></script>
 </body>

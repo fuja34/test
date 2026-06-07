@@ -1,15 +1,6 @@
-/* =====================================================================
- * page.css  -  タイトル / ページ / 選択肢 の見た目
- * 配色・装飾はここを編集すれば作品ごとに調整できます。
- * ===================================================================== */
-
-/* タイトル画面は page=0 として下記「ゲームページ」と同じ枠組みで描画し、
-   .page.is-title の追加スタイルだけで見た目を切り替えます。 */
-
-/* ---------- ゲームページ ---------- */
 .page {
   width: 100%;
-  max-width: 720px;        /* PCで間延びしないよう最大幅を制限 */
+  max-width: 720px;        
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -17,34 +8,29 @@
   gap: 20px;
 }
 
-/* メディア領域：画像中心。縮小せず常に幅いっぱい（最大720px）に表示する。
-   高さ制限はかけないので、縦長画像で選択肢が下に来る場合はスクロールで表示。 */
 .page-media {
   width: 100%;
   display: flex;
   justify-content: center;
 }
-/* display:flex がUAの [hidden]{display:none} を上書きするため明示的に打ち消す
-   （画像なしページで空のメディア枠と余白が残らないように） */
+
 .page-media[hidden] { display: none; }
 
 .media-el {
   display: block;
-  width: 100%;          /* いかなる場合も幅いっぱい（.page の max-width:720px で頭打ち） */
-  height: auto;         /* 縦横比を維持。高さ制限なし */
+  width: 100%;          
+  height: auto;         
   border-radius: 10px;
 }
 
-/* 本文（空のときはJS側で hidden になる） */
 .page-text {
   width: 100%;
   font-size: clamp(1rem, 3.4vw, 1.1rem);
-  white-space: pre-wrap;   /* CSV内の改行をそのまま反映 */
+  white-space: pre-wrap;   
   word-break: break-word;
 }
 .page-text[hidden] { display: none; }
 
-/* 選択肢 */
 .page-choices {
   width: 100%;
   display: flex;
@@ -64,13 +50,12 @@
   border-radius: 12px;
   padding: 16px 18px;
   line-height: 1.5;
-  overflow-wrap: anywhere;   /* URL等の長い連続文字でも折り返してはみ出さない */
+  overflow-wrap: anywhere;   
   transition: background .15s ease, border-color .15s ease, transform .1s ease;
 }
 .choice-btn:hover { background: #2c2f3d; border-color: #4a4f68; }
 .choice-btn:active { transform: scale(.99); }
 
-/* 物語の終わり */
 .the-end {
   text-align: center;
   font-size: clamp(1.1rem, 4vw, 1.4rem);
@@ -79,7 +64,6 @@
   padding: 24px 0 8px;
 }
 
-/* TOPへ ボタン（エンディングからタイトルへ戻る）。中央寄せのピル型。 */
 .top-btn {
   align-self: center;
   width: auto;
@@ -88,8 +72,6 @@
   padding: 12px 32px;
 }
 
-/* ---------- タイトル画面（page=0）専用の見た目 ---------- */
-/* 「はじめる」ボタンは中央寄せのピル型、クレジットは下中央に小さく表示 */
 .page.is-title .page-choices {
   align-items: center;
 }
@@ -120,7 +102,6 @@
 }
 .page-credit[hidden] { display: none; }
 
-/* ---------- CSV選択画面（フォールバック） ---------- */
 .picker-inner {
   text-align: center;
   max-width: 520px;

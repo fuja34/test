@@ -1,4 +1,3 @@
-/* 自動生成: data.csv の内容を埋め込んだものです。data.csv を編集したら再生成してください。 */
 window.GAMEBOOK_CSV = `page,text,image,choice1_text,choice1_to,choice2_text,choice2_to,choice3_text,choice3_to
 0,サンプルゲームブック,motoyan_001.png,はじめる,1,(c) 2026 R-Business,,,
 1,"古い洞窟の入り口に立っている。
